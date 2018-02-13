@@ -1,0 +1,49 @@
+
+
+```{R}
+library(readr)
+PovertyStudy <- read_table("PovertyStudy.dat")
+View(PovertyStudy)
+```
+
+
+```{R}
+M <- as.matrix(PovertyStudy[,1:6])
+mean_vector <- as.matrix(apply(M, 2, mean))
+```
+
+Centered Data Matrix
+
+```{R}
+centering <- function(M){
+  mean_vector <- as.matrix(apply(M, 2, mean))
+  ones <- rep(1, nrow(M))
+  centered_data <- (M - ones%*%t(mean_vector))
+  return(centered_data)
+}
+
+centered_data <- centering(M)
+
+```
+
+
+```{R}
+covariance_matrix <- function(M){
+  mean_vector <- as.matrix(apply(M, 2, mean))
+  ones <- rep(1, nrow(M))
+  centered_data <- (M - ones%*%t(mean_vector))
+  covariance_M <- (1/(nrow(M)-1))*(t(centered_data)%*%centered_data)
+  return(covariance_M)
+}
+
+variance_covariance_matrix <- covariance_matrix(M)
+
+```
+
+
+```{R}
+
+```
+
+
+
