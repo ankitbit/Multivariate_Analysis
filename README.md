@@ -1,2 +1,2 @@
-# Multivariate_Analysis
-This repository contains materials associated to the course "Statistical Natural Language Processing (SNLP)" taught at the Barcelona School of Informatics (FIB), UPC under the MIRI-Data Science Program
+# Multivariate Analysis
+This repository contains materials associated to the course "Multivariate Analysis" taught at the Faculty of Mathematics and Statistics (FME), UPC under the MESIO-UPC-UB Interuniversity Program
